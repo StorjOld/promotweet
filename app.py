@@ -28,8 +28,8 @@ application.config['MONGO_DBNAME'] = 'storj_social'
 application.config['STORJ_API_ENDPOINT'] = 'http://node2.storj.io/api'
 
 # OAuth tokens for 'Tweet for Storj Space' Twitter application
-application.config['TWITTER_CONSUMER_KEY'] = 'dfXJQnmjWURNnZjEptqHKKkg3'
-application.config['TWITTER_CONSUMER_SECRET'] = 'OOgYGEuA6CARZnNla2HbO6D0E5REBeszNXDNncoElBIc9KWXE5'
+application.config['TWITTER_CONSUMER_KEY'] = ''
+application.config['TWITTER_CONSUMER_SECRET'] = ''
 application.config['TWITTER_CALLBACK_URL'] = 'http://localhost:8000/twitter/access'
 application.config['TWITTER_REDIRECT_URL'] = 'http://node2.storj.io'
 application.config['TWITTER_PROMO_TWEET'] = 'It\'s time to decentralize storage. Try Storj today! http://storj.io #storj'
