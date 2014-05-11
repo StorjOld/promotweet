@@ -76,7 +76,6 @@ class TokenAPI:
 
 	def redeemCode(self, code):
 		payload = {'promocode': code}
-		print('token ='+self.token)
 		r = requests.post(url=application.config['STORJ_API_ENDPOINT'] + '/token/redeem/' + self.token, data=json.dumps(payload))
 		return True if r.status_code == 200 else False
 
@@ -124,7 +123,6 @@ def access():
 		mongo.db.twitter_coupons.update({'code':promocode}, {'code':promocode, 'status':'used'})
 
 	redeemed = session['storj'].redeemCode(promocode)
-	print(redeemed)
 	if(not redeemed):
 		error = "We were able to post your tweet, but not redeem your free storage space. Please contact us."
 		return render_template('error.html', error_msg=error)
