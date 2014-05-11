@@ -77,7 +77,7 @@ class TokenAPI:
 	def redeemCode(self, code):
 		payload = {'promocode': code}
 		print('token ='+self.token)
-		r = requests.post(url=application.config['STORJ_API_ENDPOINT'] + '/token/redeem/' + self.token, data=payload)
+		r = requests.post(url=application.config['STORJ_API_ENDPOINT'] + '/token/redeem/' + self.token, data=json.dumps(payload))
 		return True if r.status_code == 200 else False
 
 @application.route('/twitter/get-space', methods = ['POST'])
