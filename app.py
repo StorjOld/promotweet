@@ -1,12 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+from gevent import monkey; monkey.patch_all()
+from gevent.pywsgi import WSGIServer
 import settings
-
-if not app.debug:
-	from gevent import monkey; monkey.patch_all()
-	from gevent.pywsgi import WSGIServer
-
 from flask import Flask, request, jsonify, session, redirect, render_template, url_for
 from flask.ext.pymongo import PyMongo
 from flask.ext.mongo_sessions import MongoDBSessionInterface
