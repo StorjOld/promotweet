@@ -1,7 +1,3 @@
-
-# Debug settings
-DEBUG = False
-
 # MongoDB configuration
 MONGO_HOST 		= 'http://127.0.0.1'
 MONGO_DBNAME	= 'storj_social'

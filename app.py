@@ -115,8 +115,5 @@ def access():
 	return render_template('redirect.html')
 
 if __name__ == '__main__':
-	if app.debug:
-		app.run(host='0.0.0.0', port=8000, debug=True)
-	else:
-		server = WSGIServer(('0.0.0.0', 80), app)
-		server.serve_forever()
+	server = WSGIServer(('0.0.0.0', 80), app)
+	server.serve_forever()
