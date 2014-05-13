@@ -12,27 +12,7 @@ from urlparse import parse_qs
 from urllib import quote_plus
 from TwitterAPI import TwitterAPI
 
-# Notes:
-# This should be pretty robust. May want to add more error handling in the future.
-
 application = Flask('__name__')
-#application.config['DEBUG'] = True
-
-# MongoDB configuration
-application.config['MONGO_HOST'] = 'localhost'
-application.config['MONGO_DBNAME'] = 'storj_social'
-#application.config['MONGO_USERNAME'] = ''
-#application.config['MONGO_PASSWORD'] = ''
-
-# Storj configuriation
-application.config['STORJ_API_ENDPOINT'] = 'http://node2.storj.io/api'
-
-# OAuth tokens for 'Tweet for Storj Space' Twitter application
-application.config['TWITTER_CONSUMER_KEY'] = ''
-application.config['TWITTER_CONSUMER_SECRET'] = ''
-application.config['TWITTER_CALLBACK_URL'] = 'http://localhost:8000/twitter/access'
-application.config['TWITTER_REDIRECT_URL'] = 'http://node2.storj.io'
-application.config['TWITTER_PROMO_TWEET'] = 'It\'s time to decentralize storage. Try Storj today! http://storj.io #storj'
 
 mongo = PyMongo(application)
 with application.app_context():
