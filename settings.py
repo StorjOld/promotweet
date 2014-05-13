@@ -11,7 +11,7 @@ MONGO_DBNAME	= 'storj_social'
 # Storj configuriation
 STORJ_API_ENDPOINT = 'http://node2.storj.io/api'
 
-# OAuth tokens for twitter application
+# OAuth tokens for twitter app
 TWITTER_CONSUMER_KEY = ''
 TWITTER_CONSUMER_SECRET = ''
 TWITTER_CALLBACK_URL = 'http://127.0.0.1/twitter/access'
